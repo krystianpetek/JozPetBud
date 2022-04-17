@@ -1,0 +1,1041 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(30, 30, 30);
+}
+
+#container {
+    position: relative;
+    left: 0;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9em;
+    font-weight: 400;
+    transition: 0.8s;
+}
+
+.linkiMenu {
+    height: 90%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 1.2em;
+    text-transform: none;
+    color: white;
+    text-shadow: 3px 3px rgb(63, 63, 63);
+}
+
+.h1 {
+    text-align: center;
+    padding-top: 20px;
+    position: relative;
+    top: 64px;
+}
+
+h2 {
+    padding-bottom: 15px;
+    text-transform: uppercase;
+}
+
+h3 {
+    padding: 10px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+p {
+    padding: 10px;
+    font-size: 16px;
+    padding-bottom: 15px;
+}
+
+.button {
+    margin-top: 20px;
+    background-color: rgb(244, 195, 94);
+    color: rgb(29, 38, 82);
+    padding: 30px;
+    width: 101px;
+    text-shadow: none;
+    border-radius: 5px;
+    display: flex;
+    box-shadow: -10px -10px rgba(209, 108, 40, 0.8);
+    justify-content: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 800;
+    margin: 40px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    width: 115px;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.strzalkaButton {
+    position: relative;
+    left: -15px;
+    z-index: -1;
+    transition: 0.3s;
+}
+
+.button:hover .strzalkaButton {
+    display: flex;
+    z-index: 0;
+    left: 10px;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+@media(max-width: 767px) {
+    h1 {
+        font-size: 40px;
+        padding: 15px;
+    }
+    .h1{
+        padding: 0;
+    }
+}
+
+@media(min-width: 768px) {
+    .content {
+        width: 750px;
+    }
+}
+
+@media(min-width: 1000px) {
+    .content {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .content {
+        width: 1170px;
+    }
+}
+
+/* ============ MENU MOBILNE ============ */
+#menuMobilne {
+    width: 100%;
+    z-index: 9999;
+    left: -100%;
+    height: 100vh;
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    position: fixed;
+    visibility: hidden;
+}
+
+.pozycjeMenuMobilne {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100vh;
+    background-color: rgb(244, 247, 246);
+    float: left;
+}
+
+#przeslonaMenuMobilne {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 100vh;
+    float: left;
+    transition: all 0.4s 0.2s ease-in-out;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.0));
+    cursor: progress;
+}
+
+.pozycjeMenuMobilne a {
+    padding: 24px 36px;
+    height: 20px;
+    border-bottom: 1px solid rgb(230, 230, 230);
+    color: black;
+    font-weight: bold;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.pozycjeMenuMobilne a:hover {
+    background-color: #fff;
+    transition: 0.3s;
+}
+
+#buttonZamknijMenuMobilne {
+    height: 64px;
+    color: black;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 0 30px;
+    display: flex;
+    justify-content: center;
+}
+
+#buttonZamknijMenuMobilne:hover {
+    background-color: rgb(244, 247, 246);
+}
+
+.pasekClose {
+    height: 3px;
+    width: 20px;
+    position: absolute;
+    background-color: #202121;
+    transition: 0.5s;
+}
+
+#close {
+    width: 20px;
+    height: 3px;
+    padding-left: 10px;
+}
+
+#pasekClose1 {
+    transform: rotate(45deg);
+}
+
+#pasekClose2 {
+    transform: rotate(-45deg);
+}
+
+#buttonZamknijMenuMobilne:hover #pasekClose1 {
+    transform: rotate(135deg);
+    transition: 0.5s;
+}
+
+#buttonZamknijMenuMobilne:hover #pasekClose2 {
+    transform: rotate(-135deg);
+    transition: 0.5s;
+}
+
+.menuMobilneRozwin {
+    visibility: visible !important;
+    left: 0 !important;
+}
+
+@media(max-width: 767px) {
+    #menuMobilne {
+        transition: all 0.4s ease-in-out;
+    }
+
+    .linkiMenu {
+        text-shadow: none !important;
+    }
+}
+
+@media(max-width: 380px) {
+    a.linkiMenu span {
+        font-size: 0px;
+    }
+
+    a.linkiMenu span em {
+        font-size: 24px !important;
+    }
+}
+
+/* ============== HEADER =============== */
+#header {
+    height: 80px;
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+    background-image: linear-gradient(rgb(63, 63, 63), rgba(255, 255, 255, 0.0));
+}
+
+#header .content {
+    margin: 0 auto;
+    height: 80px;
+}
+
+@media(max-width: 767px) {
+    #header {
+        background-image: none;
+        background-color: rgb(244, 247, 246);
+        border-bottom: 1px solid rgb(230, 230, 230);
+    }
+
+    #header,
+    #header .content {
+        height: 64px;
+    }
+
+    #buttonMenu {
+        display: flex !important;
+    }
+}
+
+#buttonMenu {
+    display: none;
+    float: left;
+    height: 64px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    border-right: 1px solid rgb(230, 230, 230);
+    width: 100px;
+    background-color: rgb(244, 247, 246);
+    font-size: 14px;
+    font-weight: 400;
+    color: #202121;
+}
+
+#buttonMenu:hover {
+    transition: 0.3s;
+    color: rgb(119, 125, 129);
+}
+
+#buttonMenu:hover>#paski>.pasek {
+    transition: 0.3s;
+    background-color: rgb(119, 125, 129);
+}
+
+#paski {
+    margin: 0;
+    display: block;
+    float: left;
+    clear: both;
+    padding-right: 10px;
+}
+
+.pasek {
+    margin-bottom: 2px;
+    height: 2px;
+    width: 15px;
+    float: left;
+    clear: both;
+    background-color: #202121;
+}
+
+.pasek:last-child {
+    margin: 0;
+}
+
+/* ============== MENU GŁÓWNE =============== */
+
+#logo {
+    height: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+#logo a {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    color: #fff;
+    font-size: 25px;
+    text-transform: uppercase;
+    transition: all 0.5s;
+}
+
+#logo a em {
+    color: #f7c552;
+    font-size: 36px;
+}
+
+#logo .linkiMenu:hover {
+    transition: all 0.5s 0s ease-out;
+    transform: scale(1.15);
+}
+
+#logo:hover a span em {
+    text-shadow: 3px 3px 2px rgb(212, 107, 22);
+}
+
+#pozycjeMenuGlowne {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    float: right;
+}
+
+#pozycjeMenuGlowne .linkiMenu:hover {
+    transition: 0.3s;
+    color: rgb(214, 214, 214);
+    text-shadow: 2px 1px 3px black;
+} /* ============================================ dopracować tutaj JS =========scrollowanie()==============*/
+
+@media(max-width: 767px) {
+
+    #pozycjeMenuGlowne {
+        display: none;
+    }
+
+    #logo {
+        float: right;
+    }
+    
+    #logo a {
+        text-shadow: 2px 2px 2px rgb(135, 137, 149);
+    }
+
+    #logo a:hover {
+        transform: scale(1.1);
+    }
+
+    #logo a span {
+        color: rgb(54, 59, 82);
+    }
+
+    #logo a span em{
+        text-shadow: 2px 3px 2px rgb(212, 107, 22);
+    }
+
+    #logo a em {
+        color: rgb(250, 214, 80);
+    }
+}
+
+/* ============== Strona Główna =============== */
+
+#stronaGlowna {
+    background-image: url('./images/background/orgduz.jpg');
+    background-position: center center;
+    background-size: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    max-height: 1080px;
+    min-height: 700px;
+}
+
+#stronaGlowna .content {
+    width: 80%;
+    max-width: 1080px;
+    min-width: 300px;
+    margin: 150px 0px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0 30px;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+#stronaGlowna span {
+    font-size: 26px;
+    line-height: 1.4em;
+    padding-top: 20px;
+    text-transform: none;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
+#przeslonaStronyGlownej {
+    max-width: 700px;
+}
+
+#przejdzDoGory {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    border: 3px solid rgba(0, 0, 0, 0);
+    display: none;
+    justify-content: center;
+    cursor: pointer;
+    background-image: url(./images/background/strzalka.png);
+    background-position: center center;
+    background-size: contain;
+    background-color: rgba(249, 204, 162, 0.767);
+    border-radius: 50%;
+    z-index: 9999;
+}
+
+#przejdzDoGory:hover {
+    background-image: url(./images/background/strzalka_tlo.png);
+    transition: 0.3s;
+    background-color: rgb(253, 222, 161);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px 1px #f7c552;
+}
+#przejdzDoGory:active{
+    transform: scale(1.5);
+}
+
+@media(max-width: 767px) {
+    #stronaGlowna {
+        height: 100%;
+        min-height: 500px;
+    }
+    #stronaGlowna span {
+        font-size: 20px;
+        padding: 15px;
+        display: block
+    }
+    #stronaGlowna .content{
+        padding: 0;
+    }
+    #przejdzDoGory {
+        bottom: 30px;
+        right: 30px;
+    }
+}
+
+@media(max-width: 1170px) {
+    
+    #stronaGlowna {
+        background-image: url('./images/background/orgmale.jpg');
+        background-position: top center;
+    }
+}
+
+@media(max-width: 1400px) {
+    #stronaGlowna {
+        background-size: cover;
+    }
+}
+
+/* =================== OFERTA =================== */
+
+#oferta .content {
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 80px;
+}
+
+#pojemnikOferty {
+    width: 100%;
+    position: relative;
+    padding-top: 120px;    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.uslugi {
+    width: 33.3333333333%;
+}
+
+.uslugi div {
+    padding: 10px;
+    color: white;
+    margin: 20px;
+    text-transform: none;
+    line-height: 1.8em;
+    display: table-cell;
+}
+
+.ogranicznik span {
+    font-size: 17px;
+    display: block;
+}
+
+div.wskaznikUsluga {
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    padding-right: 5px;
+    border-top: 8px solid transparent;
+    border-left: 8px solid rgb(244, 195, 104);
+    border-bottom: 8px solid transparent;
+    float: left;
+    display: table-cell;
+}
+
+.uslugi:hover .wskaznikUsluga {
+    border-left: 8px solid rgb(209, 108, 40);
+    transform: scale(1.5);
+    position: relative;
+    left: 3px;
+}
+
+@media(max-width: 1000px) {
+    #pojemnikOferty article {
+        width: 100%;
+        padding: 15px 0;
+    }    
+
+    .ogranicznik {
+        padding-left: 15px;
+    }
+
+    .ogranicznik:last-child {
+        padding-right: 15px;
+    }
+}
+
+/* =================== O NAS =================== */
+#oNas {
+    background-image: url("./images/background/orgduze2.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    text-transform: none;
+    text-shadow: 2px 2px 2px black;
+}
+
+#przeslonaoNas {
+    background-color: rgba(0, 0, 0, 0.70);
+    height: 100%;
+}
+
+#oNas .content {
+    margin: 0 auto;
+    padding-bottom: 80px;
+}
+
+#oNas .teksty {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.8em;
+    text-align: center;
+}
+
+#pojemnikoNas
+{
+    width: 100%;
+    position: relative;
+    padding-top: 120px;
+}
+
+#pojemnikoNas span {
+    padding-left: 30px;
+    position: relative;
+    display: flex;
+    padding-bottom: 15px;
+    font-size: 17px;
+}
+
+#pojemnikoNas #strzalka {
+    padding: 0;
+}
+
+#pojemnikoNas2 {
+
+    padding: 50px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-bottom: 0px;
+}
+
+/* =================== REALIZACJE =================== */
+
+#realizacje .content {
+    margin: 0 auto;
+    padding-bottom: 80px;
+}
+
+#realizacje .pojemnik {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+    padding-top: 120px;
+}
+
+#realizacje img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    padding: 20px;
+}
+
+#realizacje img:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+#celGaleria {
+    position: absolute;
+    top: 80px;
+    left: 0;
+}
+
+#tlo div {
+    display: flex;
+    justify-content: center;
+    height: 90%;
+    align-items: center;
+}
+
+.fixedGaleria {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 0;
+}
+
+.zaslonaGaleria{
+    position: fixed;
+    width:  100%;
+    height: 100%;
+    z-index: 9999;
+}
+
+.klik {
+    position: absolute !important;
+    max-width: 90% !important;
+    max-height: 90vh !important;
+    transition: 0.8s;
+}
+
+@media(max-width: 767px) {
+
+    #celGaleria {
+        top: 64px !important;
+    }
+
+}
+
+/* =================== KONTAKT =================== */
+#kontakt {
+    background-image: url("./images/background/orgduze3.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    text-transform: none;
+    text-shadow: 2px 2px 2px black;
+}
+
+#kontakt .content {
+    margin: 0 auto;
+    padding-bottom: 80px;
+    line-height: 1.8em;
+    font-size: 16px;
+    text-align: center;
+}
+
+#kontakt .pojemnik
+{
+    width: 100%;
+    position: relative;
+    padding-top: 120px;
+}
+
+
+#kontakt #przeslonaKontakt {
+    background-color: rgba(0, 0, 0, 0.70);
+    height: 100%;
+}
+
+.tekst {
+    padding: 0px;
+    font-size: 20px;
+}
+
+span.tekstKontakt {
+    display: block;
+}
+
+#telefon {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#telButton {
+    background-color: white;
+    color: rgb(29, 38, 82);
+    padding: 30px;
+    width: 110px;
+    text-shadow: none;
+    display: flex;
+    box-shadow: -10px -10px grey;
+    justify-content: center;
+    transition: 0.3s;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 800;
+    margin-left: 40px;
+    position: relative;
+    border-radius: 5px;
+}
+
+#telButton:hover {
+    width: 120px;
+    transition: 0.3s;
+    justify-content: center;
+    transition: 0.3s;
+    box-shadow: 0px 0px 10px 3px white;
+    letter-spacing: 1px;
+    border-radius: 10px;
+}
+
+#pojemnikFormularz {
+    width: 100%;
+    padding-top: 50px;
+}
+/* === FORMULARZ === */
+#formularzKontaktowy {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#formularzKontaktowy input {
+    padding: 16px;
+    margin-bottom: 20px;
+    width: 44%;
+}
+
+#formularzKontaktowy textarea {
+
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+}
+
+#rodo {
+    margin: 10px;
+    width: 100%;
+    text-align: left;
+    line-height: 1.5;
+}
+
+#rodo input {
+    width: 25px !important;
+    margin: 0;
+}
+
+#submit {
+    margin-top: 20px;
+    background-color: #fff;
+    color: rgb(29, 38, 82);
+    width: 150px !important;
+    text-shadow: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 2px grey;
+    border: 1px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+@media(max-width: 1000px) {
+    #kontakt a {
+        margin: 20px auto;
+    }
+    #telefon {
+        display: block !important;
+    }
+    #formularzKontaktowy input {
+        width: 100% !important;
+        flex-wrap: wrap;
+        line-height: 1;
+    }#rodo input {
+        width: 25px !important;
+        margin: 0;
+    }
+    
+}
+
+/* =================== STOPKA =================== */
+
+#footer {
+    color: white;
+    text-transform: none;
+    text-shadow: 2px 2px 2px black;
+}
+
+#footer .content {
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+footer .content .pojemnikFooter {
+    padding: 50px;
+}
+
+.pojemnikFooter p {
+    float: left;
+}
+
+@media(max-width: 767px) {
+    #autor {
+        margin-top: 60px;
+        min-width: 270px;
+        left: 50px;
+    }
+    
+}
+
+#autor {
+    display: none;
+    float: right;
+    display: block;
+    position: relative;
+}
+
+footer span {
+    display: block;
+    padding: 10px;
+}
+
+#animacjaAutor span{
+    color: rgba(255, 255, 255, 0.70);
+    font-family: 'Raleway';
+    display: inline-block;
+    white-space: nowrap;
+    padding: 0px;
+    position: relative;
+    overflow: hidden;
+}
+
+#jeden, #dwa{
+    font-size: 28px;
+}
+
+footer #jeden {
+    display: none;
+}
+
+#dwa {
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+#trzy {
+    font-size: 20px;
+    opacity: 0;
+    left: -160px;
+    top: 8px;
+}
+
+#animacjaWSEI {
+    padding: 0px;
+    display: block;
+    left: 20px;
+    height: 100px;
+    z-index: 1;
+    width: 0px;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.jeden {
+    animation: Krystian 9s 0.5s normal both
+    /*steps(14,end) 1s 1 normal both*/
+}
+
+.dwa {
+    animation: Petek 5s 4s 1 normal both;
+}
+
+.trzy {
+    animation: student 5s 8s 1 normal both;
+}
+
+.wseiLogo { 
+    animation: wseiLOGO 5s 8s 1 normal both;
+}
+
+@keyframes Krystian {
+
+    0% {
+        top: 0px;
+        width: 0;
+    }
+
+    25% {
+        width: 110px;
+        top: 0
+    }
+
+    50% {
+        width: 110px;
+        top: -30px;
+    }
+
+    78% {
+        width: 110px;
+        top: -30px;
+    }
+
+    100% {
+        width: 110px;
+        top: -60px;
+    }
+}
+
+@keyframes Petek {
+
+    0% {
+        left: 0;
+    }
+
+    25% {
+        opacity: 0;
+        left: -113px;
+    }
+
+    50% {
+        opacity: 1;
+        left: -113px;
+    }
+
+    75% {
+        opacity: 1;
+        top: 0px;
+        left: -85px;
+    }
+
+    100% {
+        opacity: 1;
+        left: -85px;
+        top: -30px;
+    }
+}
+
+@keyframes student {
+    0% {
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+    
+}
+
+@keyframes wseiLOGO {
+
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 90px;
+    }
+}

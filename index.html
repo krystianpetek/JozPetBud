@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Oferta firmy budowlanej JózPetBud to szeroko rozumiane usługi budowlane z zakresu modernizacji, budownictwa i remontów obiektów użyteczności prywatnej i publicznej zarówno dla inwestorów prywatnych jak i innych przedsiębiorstw. Zapewniamy kompleksowe generalne wykonawstwo na terenie małopolski i śląska">
+    <meta name="keywords" content="JózPetBud, Józef Petek, usługi budowlane, remonty" />
+    <meta name="author" content="Krystian Petek" />
+    <meta name="copyright" content="JózPetBud" />
+    <meta name="robots" content="follow" />
+    <title>JózPetBud - Józef Petek - Kompleksowe Usługi Budowlane</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,800;1,400;1,800&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
+</head>
+
+<body onresize="Resize()" onscroll="scrollowanie()">
+    <div id="container">
+
+        <div id="menuMobilne">
+            <nav class="pozycjeMenuMobilne">
+                <a id="buttonZamknijMenuMobilne" class="linkiMenu" onclick="Rozwin()">ZAMKNIJ
+                    <div id="close">
+                        <div class="pasekClose" id="pasekClose1"></div>
+                        <div class="pasekClose" id="pasekClose2"></div>
+                    </div>
+                </a>
+                <a href="#oferta" class="linkiMenu" onclick="Rozwin()">Oferta</a>
+                <a href="#oNas" class="linkiMenu" onclick="Rozwin()">O nas</a>
+                <a href="#realizacje" class="linkiMenu" onclick="Rozwin()">Realizacje</a>
+                <a href="#kontakt" class="linkiMenu" onclick="Rozwin()">Kontakt</a>
+            </nav>
+            <div id="przeslonaMenuMobilne" onclick="Rozwin()"></div>
+        </div>
+
+        <header id="header">
+            <div class="content">
+
+                <section id="buttonMenu" onclick="Rozwin()">
+                    <div id="paski">
+                        <div class="pasek"></div>
+                        <div class="pasek"></div>
+                        <div class="pasek"></div>
+                    </div>
+                    MENU
+                </section>
+
+                <section id="logo">
+                    <a href="#stronaGlowna" class="linkiMenu">
+                        <span>
+                            <em>J</em>óz<em>P</em>et<em>B</em>ud
+                        </span>
+                    </a>
+                </section>
+
+                <nav id="pozycjeMenuGlowne">
+                    <a href="#oferta" class="linkiMenu"><span class="spany">Oferta</span></a>
+                    <a href="#oNas" class="linkiMenu"><span class="spany">O nas</span></a>
+                    <a href="#realizacje" class="linkiMenu"><span class="spany">Realizacje</span></a>
+                    <a href="#kontakt" class="linkiMenu"><span class="spany">Kontakt</span></a>
+                </nav>
+
+            </div>
+        </header>
+
+        <main>
+            <section id="stronaGlowna">
+                <div class="content">
+                    <div id="przeslonaStronyGlownej">
+                        <h1>Kompleksowe usługi budowlane</h1>
+                        <span>Zapewniamy kompleksowe wykonawstwo na terenie województwa małopolskiego i śląskiego zarówno przy budowie nowych obiektów, jak i modernizacji już istniejących. Pełna oferta zawiera następujące usługi:</span>
+                        <a class="button" href="#oferta">Oferta<div class="strzalkaButton">-></div></a>
+                    </div>
+                </div>
+                <div id="przejdzDoGory" onclick="ScrollDoGory()"></div>
+            </section>
+
+            <section id="oferta">
+                <div class="content">
+                    <h1 class="h1">Oferta</h1>
+                    <div id="pojemnikOferty">
+
+                        <article class="uslugi">
+                            <div class="ogranicznik">
+                                <div class="wskaznikUsluga"></div>
+                            </div>
+                            <div class="ogranicznik">
+                                <h2>Generalne wykonawstwo</h2>
+                                <span>Zajmujemy się kompleksową realizacją inwestycji, począwszy od przygotowania procesu inwestycyjnego, przez realizację projektu, kończąc na uzyskaniu pozwolenia na użytkowanie zrealizowanego obiektu.</span>
+                            </div>
+                        </article>
+
+                        <article class="uslugi">
+                            <div class="ogranicznik">
+                                <div class="wskaznikUsluga"></div>
+                            </div>
+                            <div class="ogranicznik">
+                                <h2>Realizacja obiektów pod klucz</h2>
+                                <span>Oferta wykończenia pod klucz pozwala na szybkie zamieszkanie w pełni wykończonym lokalu. Jedna umowa, jeden wykonawca, stała cena, gwarancja terminu i wiele innych udogodnień.</span>
+                            </div>
+                        </article>
+
+                        <article class="uslugi">
+                            <div class="ogranicznik">
+                                <div class="wskaznikUsluga"></div>
+                            </div>
+                            <div class="ogranicznik">
+                                <h2>Projektowanie inwestycji wraz z jej realizacją</h2>
+                                <span>Zajmujemy się obsługą inwestycji obejmującą przygotowanie wielobranżowych projektów budowlanych, projektów wykonawczych, kosztorysów inwestorskich, specyfikacji technicznych.</span>
+                            </div>
+                        </article>
+
+                        <article class="uslugi">
+                            <div class="ogranicznik">
+                                <div class="wskaznikUsluga"></div>
+                            </div>
+                            <div class="ogranicznik">
+                                <h2>Doradztwo techniczne na każdym etapie inwestycji</h2>
+                                <span>Opracowanie, optymalizacja i wsparcie podczas wszelkich działań związanych z planowaną inwestycją budowlaną i podczas jej trwania. Kompleksowe usługi inżynierskie obejmujące wszystkie etapy procesu inwestycyjnego - zgodnie z indywidualnymi oczekiwaniami.</span>
+                            </div>
+                        </article>
+
+                        <article class="uslugi">
+                            <div class="ogranicznik">
+                                <div class="wskaznikUsluga"></div>
+                            </div>
+                            <div class="ogranicznik">
+                                <h2>Kapitalne remonty i modernizacje obiektów</h2>
+                                <span>Usługi obejmują prace remontowo-budowlane istniejących budynków, które uległy zniszczeniu pod wpływem czasu, przywracanie funkcjonalności i wyglądu. Modernizacja, przebudowa w zależności od zleconych działań, usługi wykończeniowe remontowanych obiektów.</span>
+                            </div>
+                        </article>
+
+                        <article class="uslugi">
+                            <div class="ogranicznik">
+                                <div class="wskaznikUsluga"></div>
+                            </div>
+                            <div class="ogranicznik">
+                                <h2>Pełny zakres kompleksowych robót wykończeniowych</h2>
+                                <span>Usługi remontowo-budowlane polegające na kompleksowym wykończeniu lokali i obiektów w oparciu o najlepsze technologie i materiały, które zostały zaakceptowane przez inwestora w umowie.</span>
+                            </div>
+                        </article>
+                        
+                        <article class="uslugi">
+                            <div class="ogranicznik">
+                                <div class="wskaznikUsluga"></div>
+                            </div>
+                            <div class="ogranicznik">
+                                <h2>Wykonawstwo wszelkich instalacji budowlanych</h2>
+                                <span>Usługi związane z wykonaniem wszelkich niezbędnych instalacji branży sanitarnej i elektrycznej w każdym obiekcie według znanych na rynku technologii z zastosowaniem markowych materiałów i niezbędnych narzędzi.</span>
+                            </div>
+                        </article>
+
+                        <article class="uslugi">
+                            <div class="ogranicznik">
+                                <div class="wskaznikUsluga"></div>
+                            </div>
+                            <div class="ogranicznik">
+                                <h2>Usługi transportowe i sprzętowe do robót budowlanych</h2>
+                                <span>Usługi związane z transportem i pracami budowlanymi, do realizacji których niezbędny jest specjalistyczny sprzęt budowlany taki jak maszyny budowlane, samochody dostawcze.
+                                </span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section id="oNas">
+                <div id="przeslonaoNas">
+                    <div class="content">
+                        <h1 class="h1">O nas</h1>
+                        <div id="pojemnikoNas">
+                            <div class="teksty">
+                                <p>Nasza oferta skierowana jest do wymagających klientów którzy cenią sobie solidność i rzetelność. Dzięki bogatemu doświadczeniu i znajomości branży budowlanej sukcesywnie rozwijamy działalność spółki, oferując swoim klientom bogate portfolio zrealizowanych inwestycji  i gwarancję najwyższej jakości wykonywanych usług.</p> <p>Naszym klientom proponujemy nowatorskie rozwiązania, kompleksową obsługę i bezpieczeństwo całego procesu realizacji inwestycji. Wszystkie przedsięwzięcia wykonujemy w planowanych terminach  z zastosowaniem wysokich standardów i  ekonomiczną optymalizację.  </p>
+                                <p>Uprawnienia oraz najwyższej jakości sprzęt pozwalają nam realizować standardowe, jak również zaawansowane usługi.</p>
+                            </div>
+                            <div id="pojemnikoNas2">
+                                <h2>Nasz obszar działania</h2>
+                                <h3>Małopolska</h3>
+                                <p>Powiat Suski</p>
+                                <span>Sucha Beskidzka, Maków Podhalański, Jordanów, Bystra Podhalańska, Budzów, Zembrzyce, Stryszawa</span>
+                                <p>Powiat Wadowicki</p>
+                                <span>Wadowice, Andrychów, Kalwaria Zebrzydowska, Mucharz, Stryszów, Lanckorona, Brzeźnica, Spytkowice, Tomice, Wieprz</span>
+                                <p>Powiat Myślenicki</p>
+                                <span>Myślenice, Dobrzyce, Sułkowice, Siepraw, Pcim, Lubień, Tokarnia, Wiśniowa, Raciechowice</span>
+                                <h3>Śląsk</h3>
+                                <p>Powiat Żywiecki</p>
+                                <span>Żywiec, Jeleśnia, Koszarawa, Ujsoły, Rajcza, Milówka, Węgierska Górka, Wieprz, Świnna, Gilowice, Ślemień, Łękawica</span>
+                                <a class="button" href="#kontakt">
+                                    Kontakt <div class="strzalkaButton">-></div></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="realizacje">
+                <div class="content">
+                    <h1 class="h1">Realizacje</h1>
+                    <div class="pojemnik">
+                        <img class="zdjecie" onclick="Galeria(this)" src="./images/gallery/1.jpg">
+                        <img class="zdjecie" onclick="Galeria(this)" src="./images/gallery/2.jpg">
+                        <img class="zdjecie" onclick="Galeria(this)" src="./images/gallery/3.jpg">
+                        <img class="zdjecie" onclick="Galeria(this)" src="./images/gallery/4.jpg">
+                        <img class="zdjecie" onclick="Galeria(this)" src="./images/gallery/5.jpg">
+                        <img class="zdjecie" onclick="Galeria(this)" src="./images/gallery/6.jpg">
+                        <img class="zdjecie" onclick="Galeria(this)" src="./images/gallery/7.jpg">
+                        <img class="zdjecie" onclick="Galeria(this)" src="./images/gallery/8.jpg">
+                        <img class="zdjecie" onclick="Galeria(this)" src="./images/gallery/9.jpg">
+                        <img class="zdjecie" onclick="Galeria(this)" src="./images/gallery/10.jpg">
+                        <img class="zdjecie" onclick="Galeria(this)" src="./images/gallery/11.jpg">
+                     </div>
+                </div>
+            </section>
+            
+            <section id="kontakt">
+                <div id="przeslonaKontakt">
+                    <div class="content">
+                        <h1 class="h1">Kontakt</h1>
+                        <div class="pojemnik">
+
+                            <div class="adres">
+                                <h2>Nasz adres</h2>
+                                <p class="tekst">JózPetBud</p>
+                                <span class="tekstKontakt">Józef Petek. Usługi ogólnobudowlane</span>
+                                <br>
+                                <span class="tekstKontakt">Koziniec 2</span>
+                                <span class="tekstKontakt">34-106 Mucharz</span>
+                                <br>
+                                <span class="tekstKontakt">tel. +48 884 284 782</span>
+                                <span class="tekstKontakt">jozefpetek72@gmail.com</span>
+                            </div>
+
+                            <div id="telefon">
+                                <h2>Skontaktuj się z nami telefonicznie</h2>
+                                <a id="telButton" href="tel:+48884284782">884 284 782</a>
+                            </div>
+
+                        </div>
+                        <div id="pojemnikFormularz">
+                            <h2>Lub poprzez formularz</h2>
+                            <form action="#" method="get" id="formularzKontaktowy">
+                                <input required type="text" id="imieNazwisko" name="imieNazwisko" placeholder="Imię i nazwisko">
+                                <input type="text" id="temat" name="temat" placeholder="Temat wiadomości">
+                                <input required type="email" id="email" name="email" placeholder="Adres e-mail">
+                                <input type="tel" id="tel" name="tel" placeholder="Nr telefonu">
+                                <textarea required id="wiadomosc" name="wiadomosc" placeholder="Wiadomość"></textarea>
+                                <label id="rodo">
+                                    <input required type="checkbox" id="rodo" name="rodo">
+                                    <span>Wyrażam zgodę na wykorzystanie moich kontaktowych wyłącznie, aby właściciel
+                                        strony mógł odpowiedzieć na zapytanie.</span></label>
+                                <input id="submit" value="Wyślij" type="submit">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer id="footer">
+            <div class="content">
+                <div class="pojemnikFooter">
+                    <span>Copyright &copy; 2021 - JózPetBud</span>
+
+                    <div id="autor">
+                        <div id="animacjaAutor">
+                            <span id="jeden">Krystian</span>
+                            <span id="dwa">Petek</span>
+                            <span id="trzy">student</span>
+                        </div>
+                        <div id="animacjaWSEI"><canvas height="100" width="100" id="plotno"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+
+    </div>
+
+    <div id="celGaleria">
+        <div id="tlo" onclick="Galeria()">
+            <div>
+                <div id="zaslonaGaleria"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
